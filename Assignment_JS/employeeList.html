@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Question 5 = Create list of object of employee
+        //name, age, salary, dob
+
+        var employeeList = [{
+            name: 'Shubham',
+            age: 23,
+            salary: 1500,
+            dob: '7/3/1998'
+        },
+        {
+            name: 'Rajeev',
+            age: 19,
+            salary: 400,
+            dob: '2/3/1997'
+        },
+        {
+            name: 'Abhirup',
+            age: 23,
+            salary: 1700,
+            dob: '15/2/1998'
+        },
+        {
+            name: 'Prince',
+            age: 25,
+            salary: 800,
+            dob: '14/3/1996'
+        }];
+
+        console.log("List of Employee");
+        console.log(employeeList);
+
+        var filterResult = employeeList.filter(employee => {
+            if(employee.salary < 1000 && employee.age > 20){
+                return employee.salary = employee.salary * 5;
+            }
+        });
+        
+        console.log(filterResult);
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Question 4 = Copy one object to another
+        // var myData = {
+        //     name: 'Shubham',
+        //     role: 'Software Engineer',
+        //     organization: 'To The New'
+        // };
+        // console.log(myData);
+        // //Cloning
+        // var myClone = myData;
+        // console.log("Cloned Data");
+        // console.log(myClone);
+
+        //4 - Using JSON.parse() and JSON.stringify()
+        
+        var myData = {
+            name: 'Shubham',
+            role: 'Software Engineer',
+            organization: 'To The New'
+        };
+        
+        console.log("Original Object");
+        console.log(myData);
+
+        var clonedData = JSON.parse(JSON.stringify(myData));
+        console.log("Cloned Data");
+        console.log(clonedData);
+</script>
+</body>
+</html>

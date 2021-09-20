@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+header{
+    padding: 0 2.5rem ;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(27, 25, 25);
+}
+
+header nav{
+    background-color: black;
+    padding: 1rem 0 1rem .5rem;
+    margin-bottom: 1rem;
+}
+
+header nav ul {
+    list-style: none;
+    text-decoration: none;
+}
+
+header nav ul li{
+    display: inline;
+    margin-right: 2rem;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    color: rgb(216, 206, 206);
+}
+
+.title{
+    padding-bottom: 1rem;
+    padding-top: .5rem;
+    color: rgb(216, 206, 206);
+}
+
+section{
+    padding: 2rem 2.5rem;
+}
+
+.banner{
+    background-color: rgb(27, 25, 25);
+    height: 360px;
+    width: auto;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content{
+    background-color: rgb(228, 231, 235);
+    color: rgb(152, 153, 155);
+    text-transform: uppercase;
+    padding: 1rem;
+    margin-top: 1.7rem;
+    text-align: justify;
+    word-spacing: .3rem;
+}
+
+.gallery{
+    margin-top: 2rem;
+}
+
+.gallery p{
+    text-transform: uppercase;
+    color: rgb(108, 109, 110);    
+    font-weight: bolder;
+    line-height: 2.5rem;
+}
+
+.images{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 1.3rem;        
+}
+
+.card{
+    background-color: white;
+    border: 2px ridge rgb(162, 163, 165);;
+}
+
+.card-body{
+    background-color:rgb(27, 25, 25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(204, 200, 200);
+    height: 315px;
+    width: 215px;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.card-footer{
+    background-color: rgb(228, 231, 235);
+    color: rgb(138, 139, 141);
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    padding: .3rem 0;
+    font-weight: 600;
+}
+
+footer{
+    background-color:rgb(27, 25, 25);
+    padding: 1.5rem 2.5rem;
+}
+
+.main-footer{
+    color: rgb(165, 164, 164);
+    font-size: large;
+    display: flex;
+    justify-content: space-between;
+}

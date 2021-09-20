@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO THE NEW - Form</title>
+    <link rel = "stylesheet" href = "mystyle.css">
+</head>
+<body>
+    <header>
+        <div class="heading">
+            <div class="title">
+                TO THE NEW
+            </div>
+            <div class="menu">
+                <ul>
+                    <li>Home</li>
+                    <li>Quick Help</li>
+                </ul>
+            </div>
+        </div>
+    </header> 
+    <section>
+        <div class="form">
+            <div class="form-header">
+                <h3>Bug Report</h3>
+            </div>
+            <div class="form-body">
+                <form>
+                    <div class="form-title">
+                        <label for = "title-box">Title:*</label>
+                        <input type = "text" name = "title-box" id = "title-box" class = "input-field" required/>
+                    </div>
+                    <div class="form-description">
+                        <label for = "desc-box">Description:*</label>
+                        <textarea name = "desc-box" id = "desc-box" class = "input-field-textarea" rows = "5" required></textarea>
+                    </div>
+                    <div class="form-os">
+                        <label for = "operatingSys">Operating System:</label>
+                        <select name = "operatingSys" id = "operatingSys" class = "input-field select-field">
+                            <option value="windows">Windows 98</option>
+                            <option value="windows" selected>Windows XP</option>        
+                            <option value="windows">Windows 7</option>        
+                            <option value="windows">Windows Vista</option>        
+                            <option value="windows">Windows 10</option>        
+                        </select>
+                    </div>
+                    <div class="form-product">
+                        <label for = "product">Product:*</label>
+                        <select name = "product" id = "product" class = "input-field select-field">
+                            <option value="windows" selected>Formoid</option>
+                            <option value="windows">Android</option>        
+                            <option value="windows">Web Application</option>       
+                        </select>
+                    </div>
+                    <div class="form-version">
+                        <label for = "version-box">Version:*</label>
+                        <input type = "text" name = "version-box" class = "input-field version-field" required/>
+                    </div>
+                    <div class="form-license">
+                        <label>License:*</label>
+                        <div class="radio-buttons">
+                            <div class="free-radio flex-radios">
+                                <input type="radio" name = "license" class = "radio-btn">
+                                <label for = "free">Free</label>
+                            </div>
+                            <div class="business-radio flex-radios">
+                                <input type="radio" name = "license" class = "radio-btn">
+                                <label for = "business">Business</label>
+                            </div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="form-severity">
+                        <label for = "severity">Severity:</label>
+                        <select name = "severity" id = "severity" class = "input-field select-field">
+                            <option value="windows" selected>Critical</option>
+                            <option value="windows">Mild</option>        
+                            <option value="windows">Normal</option>       
+                        </select>
+                    </div>
+                    <div class="form-attachments">
+                        <label for = "attachments">Attachments:</label>
+                        <input type = "file" name = "attachments" id = "attachments" class = "input-field"/>
+                    </div>
+                </form>
+            </div>
+            <div class="form-footer">
+                <button type = "submit" name = "sendBtn" id = "send-btn" class = "btn">Send</button>
+            </div>
+        </div>
+    </section>
+    <footer>
+    <!--Empty-->        
+    </footer>
+</body>
+</html>
