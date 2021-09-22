@@ -108,16 +108,16 @@
     text-transform: uppercase;
     color: white;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: .7rem;
+    font-size: .9rem;
     font-weight: 600;
-    padding: 1rem 0;
+    padding: 1.5rem 0;
     cursor: pointer;
 }
 section{
     position: relative;
 }
 .back-image{
-    height: 57vh;
+    height: 90vh;
     width: 100%;
     background-image: url("images/study.jpg");
     background-attachment: fixed;
@@ -127,7 +127,7 @@ section{
 }
 #image-content{
     position: absolute;
-    height: 57vh;
+    height: 90vh;
     width: 100%;
     background-color: rgba(21, 21, 22, 0.616);
     display: flex;
@@ -139,15 +139,16 @@ section{
     text-align: center;
 }
 #image-content h1{
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 600;
 }
 #image-content p{
-    padding: 1rem 25rem;
+    font-size: 1rem;
+    padding: 2rem 25rem;
 }
 .image-btns{
     text-transform: uppercase;
-    padding: .5rem 1rem;
+    padding: .8rem 1.2rem;
     color: white;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: .7rem;
@@ -168,12 +169,12 @@ section{
     position: absolute;
     height: auto;
     width: auto;
-    transform: translate(30vw, -7.3vh); 
+    transform: translate(13vw, -10vh); 
     display: flex;  
 }
 .cards{
-    width: 8rem;
-    height: 8rem;
+    width: 15rem;
+    height: 15rem;
     display: flex;
     flex-direction: column;
     padding: .7rem .2rem;
@@ -195,16 +196,16 @@ section{
 }
 .cards i{
     text-align: center;
-    font-size: 1.2rem; 
-    margin-bottom: 1rem;
+    font-size: 2rem; 
+    margin: 2rem 0 2rem 0;
 }
 .cards h5{
     text-align: center;
-    font-size: .8rem;
+    font-size: 1.3rem;
     font-weight: 500;
     margin-bottom: .5rem;
 }
 .cards p{
     text-align: center;
-    font-size: .5rem;
+    font-size: 1rem;
 }
