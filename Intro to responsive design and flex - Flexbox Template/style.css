@@ -1,0 +1,403 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    font-family: 'Lora', serif;
+}
+
+.banner{
+    position: relative;
+    background-image: url("images/crowd.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 2rem;
+}
+.overlay{
+    position: absolute;
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(42, 42, 42, 0.678);
+}
+.overlay #banner-title{
+    font-size: 1.7rem;
+    letter-spacing: .1rem;
+    color: rgb(236, 234, 234);
+    font-weight: 500;
+}
+.overlay #banner-desc{
+    font-size: 1rem;
+    color: rgb(230, 228, 228);
+    font-weight: 200;
+    text-align: center;
+    padding: 2rem;
+    line-height: 1.5rem;
+}
+.overlay #banner-btn{
+    background-color: rgb(69, 130, 243);
+    border: none;
+    color: white;
+    font-family: 'Lora', serif;
+    border-radius: 1px;
+    padding: .5rem 1rem;
+}
+.overlay #banner-btn:hover{
+    background-color: rgb(28, 61, 121);
+    cursor:pointer;
+}
+.content-section-container{
+    display: flex;
+    flex-direction: column;
+}
+.profile{
+    display: flex;
+    padding: 1rem 2rem;
+}
+.profile .review h4{
+    font-size: .8rem;
+    padding: 0 0 1rem 0;
+}
+.profile .review p{
+    font-size: .7rem;
+    text-align: justify;
+}
+.profile .review button{
+    font-size: .5rem;
+    padding: .5rem .7rem;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+#user1 .review h4{
+    color: rgb(63, 62, 62);
+}
+#user1 .review p{
+    color: rgb(145, 143, 143);
+}
+#user1 .review button{
+    background-color: rgb(69, 130, 243);
+    color: #fff;
+}
+#user1 .review button:hover{
+    background-color: rgba(148, 143, 143, 0.356);
+    color:rgb(69, 130, 243);
+}
+#user2{
+    background-color:rgb(69, 130, 243);
+}
+#user2 .review h4{ 
+    color: rgb(235, 233, 233);
+}
+#user2 .review p{
+    color: rgb(235, 233, 233);
+}
+#user2 .review button{
+    color: rgb(69, 130, 243);
+}
+#user2 .review button:hover{
+    background-color: rgb(82, 78, 78);
+    color:rgb(69, 130, 243);
+}
+.user-pic img{
+    height: 100px;
+    width: 100px;
+    border-radius: 100%; 
+}
+#suggestions{
+    text-align: center;
+    background-color: rgb(245, 245, 245);
+    
+}
+#suggestions h3{
+    text-transform: capitalize;
+    color:rgb(63, 62, 62);
+    font-size: 1rem;
+    margin-bottom: .7rem;
+}
+#suggestions p{
+    color: rgb(145, 143, 143);
+    font-size: .7rem;
+    margin-bottom: 1rem;
+}
+.user-container{
+    display: flex;
+}
+.user-suggestion{
+    text-align: center;
+    padding: 1rem;
+}
+.user-suggestion p{
+    text-align: center;
+    padding: 1rem 2rem 0 2rem;
+}
+.user-suggestion button{
+    background-color: rgb(69, 130, 243);
+    color: #fff;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.user-suggestion button:hover{
+    background-color: rgba(148, 143, 143, 0.356);
+    color:rgb(69, 130, 243);
+}
+#info-bar{
+    text-align: center;
+}
+#info-bar p{
+    color:rgb(145, 143, 143);
+    font-size: 1rem;
+}
+.social{
+    display: flex;
+    justify-content: center;
+}
+.social div{
+    border: 1px solid rgb(167, 166, 166);
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    border-radius: 100%;
+    margin: 0 .2rem;
+}
+.social-icon i{
+    color: rgb(167, 166, 166)
+}
+#twt a :hover{
+    color: rgb(81, 161, 251);
+}
+#fb a :hover{
+    color: rgb(11, 54, 173);
+}
+#google a :hover{
+    color: rgb(175, 3, 3);
+}
+#insta a :hover{
+    color: rgb(255, 123, 0)
+}
+/* Media Queries */
+/* Media query for smartphone and small devices (0 - 500px) */
+@media only screen and (max-width: 500px){
+    .banner{
+        height: 70vh;
+    }
+    .overlay{
+        height: 70vh;
+    }
+    .overlay #banner-title{
+        font-size: 1.5rem;
+    }
+    .overlay #banner-desc{
+        font-size: .8rem;
+        padding: 1.7rem;
+        line-height: 1rem;
+    }
+    .profile{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .profile .review{
+        padding: .5rem;
+        text-align: center;
+    }
+    .profile .review h4{
+        font-size: .8rem;
+    }
+    .profile .review p{
+        font-size: .6rem;
+        margin-bottom: 1rem;
+    }
+    .profile .review button{
+        font-size: .6rem;
+        margin: 1rem 0 2rem 0;
+    }
+    .user-container{
+        flex-direction: column;
+    }
+    #suggestions{
+        padding: 1.5rem 0;
+        margin-bottom: 2rem;
+    }
+    .user-suggestion button{
+        font-size: .5rem;
+        padding: .5rem .7rem;
+    }
+    .user-suggestion img{
+        height: 120px;
+        width: 120px;
+        border-radius: 100%;
+    }
+    #info-bar p{
+        font-size: .5rem;
+    }
+    .social{
+        margin-bottom: 1rem; 
+    }
+    #info-bar{
+        margin-bottom: 2rem;
+    }
+}
+/* Media query for tablets (501 - 1024px) */
+@media (min-width: 501px) and (max-width: 1024px){
+    .banner{
+        height: 70vh;
+    }
+    .overlay{
+        height: 70vh;
+    }
+    .overlay #banner-desc{
+        font-size: 1rem;
+        padding: 1.7rem;
+        line-height: 1.4rem;
+    }
+    .user-pic{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .user-pic img{
+        height: 170px;
+        width: 170px;
+    }
+    .review{
+        padding: .2rem 1.5rem;
+    }
+    .review p{
+        margin-bottom: .7rem;
+    }
+    #user1{
+        margin-bottom: 1.5rem;
+    }
+    #user2{
+        flex-direction: row-reverse;
+        padding: 2.5rem 1.5rem;
+    }
+    .user-container{
+        flex-direction: row;
+    }
+    #suggestions{
+        padding: 3rem 0;
+        margin-bottom: 2rem;
+    }
+    #suggestions h3{
+        font-size: 1.2rem;
+    }
+    #suggestions p{
+        font-size: .7rem;
+        margin-bottom: 2rem
+    }
+    .user-suggestion button{
+        font-size: .7rem;
+        padding: .5rem .7rem;
+    }
+    .user-suggestion img{
+        height: 120px;
+        width: 120px;
+        border-radius: 100%;
+    }
+    #info-bar p{
+        font-size: .5rem;
+    }
+    .social{
+        margin-bottom: 1rem; 
+    }
+    #info-bar{
+        margin-bottom: 2rem;
+    }
+}
+/* Media query for large screen devices (1025px and above) */
+@media (min-width: 1025px){
+    .banner{
+        height: 100vh;
+    }
+    .overlay{
+        height: 100vh;
+        padding: 0 3rem;
+    }
+    .overlay #banner-desc{
+        font-size: 1.3rem;
+        padding: 2rem 3rem;
+        line-height: 1.8rem;
+    }
+    .overlay #banner-btn{
+        padding: .7rem 1.2rem;
+        font-size: 1rem;
+    }
+    .content-section-container{
+        flex-direction: row;
+        padding: 5vh 5vw;
+    }
+    .user-pic{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .user-pic img{
+        height: 170px;
+        width: 170px;
+    }
+    .review{
+        padding: 0 2rem;
+    }
+    .profile .review h4{
+        font-size: 1rem;
+    }
+    .profile .review p{
+        font-size: .8rem;
+        margin-bottom: 1.5rem;
+    }
+    .profile .review button{
+        font-size: .7rem;
+        margin-bottom: 1.5rem;
+    }
+    #user2{
+        border-radius: 20px;
+    }
+    .user-container{
+        flex-direction: row;
+    }
+    #suggestions{
+        padding: 3rem 0;
+        margin-bottom: 2rem;
+    }
+    #suggestions h3{
+        font-size: 1.5rem;
+    }
+    #suggestions p{
+        font-size: .9rem;
+        margin-bottom: 2rem
+    } 
+    .user-suggestion button{
+        font-size: .8rem;
+        padding: .6rem .8rem;
+    }
+    .user-suggestion img{
+        height: 170px;
+        width: 170px;
+        border-radius: 100%;
+    }
+    #info-bar p{
+        font-size: .5rem;
+    }
+    .social{
+        margin-bottom: 1rem; 
+    }
+    .social div{
+        margin: 0 1.2rem; 
+    }
+    #info-bar p{
+        font-size: .7rem;
+    }
+    #info-bar{
+        margin-bottom: 2rem;
+    }
+}
