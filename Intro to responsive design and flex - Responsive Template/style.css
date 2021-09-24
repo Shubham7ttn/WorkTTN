@@ -1,0 +1,382 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+#navbar #normal-menu{
+    list-style-type: none;
+}
+
+#navbar #normal-menu li{
+    display: inline-block;
+    padding-left: 1.2rem;
+    font-size: 1rem;
+}
+#navbar #normal-menu li a{
+    color: #fff;
+}
+#navbar #normal-menu li a:hover{  
+    color: rgb(22, 151, 91);
+}
+#navbar #menu-icon{
+    display: none;
+    color: #fff;
+    font-size: 1.5rem;
+}
+#navbar #menu-icon:hover{   
+    cursor: pointer;
+    color: #fff;
+    font-size: 1.5rem;
+}
+.menu{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid rgb(104, 101, 101);
+}
+
+.hamburger-menu{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    right: 0;
+    background:rgb(22, 151, 91);
+    padding: 1rem;
+}
+
+#navbar .hamburger-menu{
+    display: none;
+}
+
+#close-menu i{
+    float: right;
+    font-size: 1rem;
+    font-weight: 100;
+    color: rgb(212, 211, 211);
+}
+
+#menu-items ul{
+    list-style-type: none;
+}
+#menu-items ul li{
+    display: block;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgb(153, 151, 151);
+}
+#menu-items ul li:first-child{
+    padding-top: 0
+}
+
+#menu-items ul li:last-child{
+    border: none;
+}
+#menu-items ul li a{
+    font-size: .8rem;
+    font-weight: 500;
+    color: rgb(212, 211, 211);   
+}
+
+.back-image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-image: linear-gradient(to top, rgba(39, 35, 44, 0.76),rgba(39, 35, 44, 0.76)), url("images/background1.jpg"); 
+    background-size: cover;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.welcome-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#greetings h2{
+    color: white;
+    font-weight: 400;
+}
+
+#travel-gallery{
+    display: flex;
+}
+
+.choose{
+    padding: .5rem;
+    text-align: center;
+}
+.choose:hover{
+    padding: .5rem;
+    text-align: center;
+    cursor: pointer;
+    background-color: rgba(39, 35, 44, 0.287);
+    border-radius: 1rem;
+}
+
+#travel i, #gallery i{
+    font-size: 1.5rem;
+    color:rgb(22, 151, 91);
+    margin: .7rem;
+}
+#travel p, #gallery p{
+    color: rgb(167, 165, 165);
+    font-weight: 300;
+    font-size: .7rem;
+}
+
+#travel h5, #gallery h5{
+    color: rgb(238, 238, 238);
+    font-weight: 400;
+    font-size: 1rem;
+    margin-bottom: .4rem;
+}
+
+#get-started-btn{
+    text-transform: uppercase;
+    background: none;
+    letter-spacing: .2rem;
+    border: 2px solid rgb(22, 151, 91);
+    padding: .5rem 1.5rem;
+    border-radius: 2rem;
+    color: rgb(22, 151, 91);
+    font-size: .7rem;
+    font-weight: 600;
+}
+#get-started-btn:hover{
+    cursor: pointer;
+    text-transform: uppercase;
+    background: rgba(39, 35, 44, 0.52);
+    letter-spacing: .2rem;
+    border: 2px solid rgb(22, 151, 91);
+    padding: .5rem 1.5rem;
+    border-radius: 2rem;
+    color: rgb(22, 151, 91);
+    font-size: .7rem;
+    font-weight: 600;
+}
+
+.service-container{
+    display: flex;
+}
+.service{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 2rem;
+}
+.service h2{
+    color:rgb(72, 72, 73);
+    font-size: 1.3rem;
+    text-align: center;
+    letter-spacing: .1rem;
+    margin-bottom: 1.5rem;
+}
+.service p{
+    color:rgb(169, 169, 170);
+    font-size: .9rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+.item-picture img{
+    border-radius: 100%;
+    margin-bottom: .7rem;
+    height: 100px;
+    width: 100px;
+}
+.learn-more button{
+    background: #fff;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    border: 2px solid rgb(22, 151, 91);
+    padding: .5rem 1rem .5rem 1rem;
+    border-radius: 2rem;
+    color: rgb(22, 151, 91);
+    font-size: .7rem;
+    font-weight: 600;
+}
+.learn-more button:hover{
+    background: rgba(207, 205, 205, 0.589);
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    border: 2px solid rgb(22, 151, 91);
+    padding: .5rem 1rem .5rem 1rem;
+    border-radius: 2rem;
+    color: rgb(22, 151, 91);
+    font-size: .7rem;
+    font-weight: 600;
+}
+/* Media Query for responsiveness */
+
+/* Media Query for smartphone (0 - 500) */
+@media only screen and (max-width: 500px){
+    .menu{
+        margin: 0 1.5rem;
+        padding: 1rem 0;
+        border-bottom: 2px solid rgba(114, 113, 113, 0.787); 
+    }
+    .back-image{
+        height: 25rem;
+    }
+    .welcome-container{
+        margin-bottom: 5.7rem;
+    }
+    .title h3 a{
+        font-size: 1rem;
+        font-weight: 600;
+        letter-spacing: .1rem;
+        color: #fff;
+    }
+    #navbar #normal-menu{
+        display: none;
+    }
+    #navbar #menu-icon{
+        display: block;
+    }
+    #navbar #menu-icon:hover + .hamburger-menu{
+        display: block;
+    }
+    .hamburger-menu{
+        width: 11rem;
+        height: 100%;
+    }
+    #greetings{
+        margin: 1.8rem 0 .2rem 0;
+    }
+    #travel-gallery{
+        flex-direction: column;
+        margin: 0 0 2rem 0;
+    }
+    .service-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .service{
+        margin-bottom: 2rem;
+    }
+}
+
+/* Media Query for tablets (501 - 1024) */
+@media (min-width: 501px) and (max-width: 1024px){
+    .menu{
+        margin: 0 2rem;
+        padding: 1.5rem 0;
+        border-bottom: 2px solid rgba(114, 113, 113, 0.787); 
+    }
+    .back-image{
+        height: 25rem;
+    }
+    .welcome-container{
+        margin-bottom: 5.7rem;
+    }
+    .title h3 a{
+        font-size: 1rem;
+        font-weight: 600;
+        letter-spacing: .1rem;
+        color: #fff;
+    }
+    #navbar #normal-menu{
+        display: none;
+    }
+    #navbar #menu-icon{
+        display: block;
+    }
+    #navbar #menu-icon:hover + .hamburger-menu{
+        display: block;
+    }
+    .hamburger-menu{
+        width: 17rem;
+        height: 100%; 
+    }
+    #greetings{
+        margin: 2.5rem 0 .2rem 0;
+    }
+    #travel-gallery{
+        flex-direction: row;
+        margin: 1rem 0 4rem 0;
+    }
+    .choose{
+        margin: 0 .5rem 0 .5rem;
+    }
+    .service-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .service{
+        margin-bottom: 2rem;
+        padding: 0 10rem;
+    }
+}
+
+/* Media Query for larger screens (1025 and above) */
+@media (min-width: 1025px){
+    .menu{
+        margin: 0 7rem;
+        padding: 2rem 0 2.8rem 0;
+        border-bottom: 2px solid rgba(114, 113, 113, 0.787); 
+    }
+    .back-image{
+        height: 35rem;
+    }
+    .welcome-container{
+        margin-bottom: 14rem;
+    }
+    .title h3 a{
+        font-size: 1rem;
+        font-weight: 600;
+        letter-spacing: .1rem;
+        color: #fff;
+    }
+    #navbar #normal-menu{
+        display: block;
+    }
+    #navbar #menu-icon{
+        display: none;
+    }
+    .hamburger-menu{
+        display: none;
+    }
+    #greetings{
+        margin: 4rem 0 .2rem 0;
+    }
+    #greetings h2{
+        font-size: 2.5rem;
+    }
+    #travel-gallery{
+        flex-direction: row;
+        margin: 1rem 0 4rem 0;
+    }
+    .choose{
+        margin: 0 3.5rem 0 3.5rem;
+    }
+    .service-container{
+        flex-direction: row;
+        padding: 0 10rem;
+    }
+    .service{
+        margin: 0 auto 4rem auto;
+    }
+    .item-picture img{
+        height: 150px;
+        width: 150px;
+    }
+}
