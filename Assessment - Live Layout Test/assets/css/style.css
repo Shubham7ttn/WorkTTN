@@ -28,10 +28,15 @@ input{
     align-items: center;
 }
 .menu{
+    position: fixed;
+    top: 0;
+    z-index: 9;
+    width: 100%;
     padding: 0 5rem;
     height: 4rem;
     background-color: #f5ea45;
 }
+
 #join-us{
     padding: 0 5rem;
 }
@@ -50,6 +55,20 @@ input{
 }
 #join-us ul li:first-child{
     border-right: 1px solid rgb(155, 153, 153);
+}
+#join-us .sub-menu{
+    /* display: none; */
+    position: absolute;
+    list-style-type: none;
+}
+#join-us > ul > li{
+    position: relative;
+}
+#join-us ul li:hover  .sub-menu{
+    display: block;
+}
+.sub-menu li{
+    display: block;
 }
 #product-image{
     display: flex;
@@ -192,6 +211,7 @@ input{
 /* Media Query for smartphones and small screen devices (0 - 500px) */
 @media only screen and (max-width: 768px){
     .menu{
+        position: static;
         flex-direction: column;
         padding: 1rem;
         height: 7rem;
