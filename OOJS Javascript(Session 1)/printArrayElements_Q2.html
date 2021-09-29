@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Exercise - Question 2</title>
+</head>
+
+<body>
+    <div id="output">
+    </div>
+    <script>
+        var list = [1, 2, 3, 4, 5];
+        var i = 0;
+        var output = document.getElementById('output');
+        
+        function printWithDelay() {
+            output.innerHTML += list[i] + ' ';
+            i++;
+            if (i < list.length) {
+                setTimeout(printWithDelay, 3000);
+            }
+        }
+        printWithDelay();
+
+        // Logic Not working -- Printing complete array after delay of 3 seconds
+        // function printWithDelay(){
+        //     for(var j = 0; j < list.length; j++){
+        //         setTimeout(function(){
+        //             output.innerHTML += list[j] + ' ';
+        //         }, 3000);
+        //     }
+        // }
+    </script>
+</body>
+
+</html>

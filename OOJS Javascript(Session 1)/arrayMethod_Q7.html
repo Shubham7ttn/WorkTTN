@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html, body{
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 1.5rem;
+        }
+        body{
+            padding: 140px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        #original-array{
+            margin-bottom: 30px;
+        }
+        #operations{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 100%;
+            padding: 30px;
+            margin-bottom: 40px;
+        }
+        .btns{
+            color: #000;
+            background-color: rgba(51, 236, 122, 0.952);
+            border: none;
+            border-radius: 7px;
+            padding: .5rem 1rem;
+        }
+        .btns:hover{
+            opacity: 0.9;
+            transition: all 0.5s;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id = "original-array">Original Array: </div>
+    <div id = "operations">
+        <button id = "join-btn" class = "btns">JOIN</button>
+        <button id = "push-btn" class = "btns">PUSH</button>
+        <button id = "pop-btn" class = "btns">POP</button>
+        <button id = "slice-btn" class = "btns">SLICE</button>
+        <button id = "shift-btn" class = "btns">SHIFT</button>
+    </div>
+    <div id="result-area">
+
+    </div>
+    <script>
+        var list = ['Shubham', 'TTN', 'FEEN', '7', 'Faridabad', '23'];
+        document.getElementById('original-array').innerHTML += '['+list+']';
+
+        //Method will be executed when JOIN button is clicked
+        document.getElementById('join-btn').addEventListener('click', function(){
+            let separator = prompt('Enter the separator');
+            let result = list.join(separator);
+            document.getElementById('result-area').innerHTML = result;
+        });
+
+        //Method will be executed when PUSH button is clicked
+        document.getElementById('push-btn').addEventListener('click', function(){
+            let duplicateList = list;
+            let newItem = prompt('Enter an element to insert in the array');
+            duplicateList.push(newItem);
+            document.getElementById('result-area').innerHTML = duplicateList;
+        });
+
+        //Method will be executed when POP button is clicked
+        document.getElementById('pop-btn').addEventListener('click', function(){
+            let duplicateList = list;
+            duplicateList.pop();
+            document.getElementById('result-area').innerHTML = duplicateList;
+        });
+
+        //Method will be executed when SLICE button is clicked
+        document.getElementById('slice-btn').addEventListener('click', function(){
+            let duplicateList = list;
+            let start = prompt('Enter starting position');
+            let end = prompt('Enter ending position');
+            let slicedArray = duplicateList.slice(start, end);
+            document.getElementById('result-area').innerHTML = slicedArray;
+        });
+
+        //Method will be executed when SHIFT button is clicked
+        document.getElementById('shift-btn').addEventListener('click', function(){
+            let duplicateList = list;
+            let result = duplicateList.shift();
+            document.getElementById('result-area').innerHTML = result;
+        });
+    </script>
+</body>
+</html>

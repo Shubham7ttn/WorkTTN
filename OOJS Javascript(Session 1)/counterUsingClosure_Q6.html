@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter using closure</title>
+
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-size: 1rem;
+        }
+        div{
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="title"><h1>Counter Using Closure</h1></div>
+    <div id="count">0</div>
+    <button id = "increment-btn">INCREMENT</button>
+
+    <script>
+        function incrementCount(){
+            var count = parseInt(document.getElementById('count').innerHTML);
+            //closure
+            function closureIncrementCount(){
+                return ++count;
+            }
+            return closureIncrementCount();
+        }
+
+        document.getElementById('increment-btn').addEventListener('click', function(){
+            document.getElementById('count').innerHTML = incrementCount();
+        });
+    </script>
+</body>
+</html>

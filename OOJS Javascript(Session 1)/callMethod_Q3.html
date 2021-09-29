@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example of Call Method</title>
+</head>
+<body>
+    <div>
+        Kindly open the console to view result
+    </div> 
+    <script>
+        /*
+        var myData = {
+            name: 'Shubham',
+            age : 23,
+            displayInfo: function(city){
+                console.log(this.name + " is "+this.age+" years old and lives in "+city);
+            }
+        };
+        myData.displayInfo('Faridabad');------> Creating separate function which performs similar task is a bad approach*/ 
+
+        //Therefore we create function separately
+
+        var myData = {
+            name: 'Shubham',
+            age: 23
+        };
+        var myFriendData = {
+            name: 'Rajeev',
+            age: 24
+        };
+        var printPersonInformation = function(city){
+            console.log(this.name+" is "+this.age+" years old and lives in "+city);
+        };
+
+        //call method example
+        printPersonInformation.call(myData, 'Faridabad');
+        printPersonInformation.call(myFriendData, 'Patna');
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number of invokes and instances</title>
+</head>
+
+<body>
+    <div>
+        Kindly open the console to view result
+    </div>
+    <script>
+        function demoObject() {
+            demoObject.numberOfInstance++;
+            demoObject.numberOfInvocation++;
+        };
+
+        demoObject.numberOfInstance = 0;
+        demoObject.numberOfInvocation = 0;
+
+        function checkInvokationsAndInstances() {
+            var obj1 = new demoObject();
+            var obj2 = new demoObject();
+            var count = {
+                instances: demoObject.numberOfInstance,
+                invocations: demoObject.numberOfInvocation
+            }
+            return count;
+        }
+        checkInvokationsAndInstances();
+        console.log('Number of instances are : ' + checkInvokationsAndInstances().instances);
+        console.log('Number of invocations are : ' + checkInvokationsAndInstances().invocations);
+    </script>
+</body>
+
+</html>
