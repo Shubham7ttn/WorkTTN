@@ -1,27 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hierarchy</title>
 </head>
+
 <body>
     <div>
         Kindly open console to see results
     </div>
     <script>
-        var person = {
-            id: 1,
-            employee: {
-                id: 2,
-                developers: {
-                    id: 3
-                }
-            }
+        function person() {
+            this.name = 'Shubham';
+            this.age = 23;
         }
+        function employee() {
+            person.call(this);
+            this.projects = ['Clock', 'Responsive Website', 'Flexbox Layout'];
+        }
+        employee.prototype = Object.create(person.prototype);
+        employee.prototype.constructor = employee;
 
-        console.log(person);
+        function developer() {
+            employee.call(this);
+            this.competency = 'FEEN';
+        }
+        developer.prototype = Object.create(employee.prototype)
+        developer.prototype.constructor = developer;
+
+        var me = new person;
+        console.log(me)
+        var meAtTTN = new employee;
+        console.log(meAtTTN)
+        var myRole = new developer;
+        console.log(myRole)
     </script>
 </body>
+
 </html>
