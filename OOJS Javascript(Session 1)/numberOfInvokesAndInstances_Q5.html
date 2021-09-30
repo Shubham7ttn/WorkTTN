@@ -21,7 +21,7 @@
         demoObject.numberOfInstance = 0;
         demoObject.numberOfInvocation = 0;
 
-        function checkInvokationsAndInstances() {
+        function checkInvocationsAndInstances() {
             var obj1 = new demoObject();
             var obj2 = new demoObject();
             var count = {
@@ -30,9 +30,10 @@
             }
             return count;
         }
-        checkInvokationsAndInstances();
-        console.log('Number of instances are : ' + checkInvokationsAndInstances().instances);
-        console.log('Number of invocations are : ' + checkInvokationsAndInstances().invocations);
+		
+        var data = checkInvocationsAndInstances();
+        console.log('Number of instances are : ' + data.instances);
+        console.log('Number of invocations are : ' + data.invocations);
     </script>
 </body>
 
