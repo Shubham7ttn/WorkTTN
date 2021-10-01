@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markup Template</title>
+</head>
+
+<body>
+    <div id="result">
+        <!-- Code will be injected here by JavaScript -->
+    </div>
+    <script>
+        const song = { name: 'Dying to live', artist: 'Tupac', featuring: 'Biggie Smalls'};
+        
+        //Object Destructing
+        let{name, artist, featuring} = song;
+        //Creating markup template
+        let markupTemplate = `<div class = 'song'><p> ${name} -- ${artist}(Featuring ${featuring})</p></div>`;
+        document.getElementById('result').innerHTML = markupTemplate;
+    </script>
+</body>
+
+</html>
