@@ -5,38 +5,64 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hierarchy</title>
+    <title>ES5 Inheritence</title>
 </head>
 
 <body>
-    <div>
-        Kindly open console to see results
-    </div>
+    <h3>Kindly Open the console to see the result</h3>
     <script>
-        function person() {
-            this.name = 'Shubham';
-            this.age = 23;
+        //Person
+        function Person(name, age, gender) {
+            this.name = name;
+            this.age = age;
+            this.gender = gender;
         }
-        function employee() {
-            person.call(this);
-            this.projects = ['Clock', 'Responsive Website', 'Flexbox Layout'];
+        Person.prototype.personInformation = function () {
+            console.log(`Hey! My name is ${this.name}....I'm ${this.age} years old and I'm a ${this.gender}`);
         }
-        employee.prototype = Object.create(person.prototype);
-        employee.prototype.constructor = employee;
 
-        function developer() {
-            employee.call(this);
-            this.competency = 'FEEN';
-        }
-        developer.prototype = Object.create(employee.prototype)
-        developer.prototype.constructor = developer;
+        let person1 = new Person('Shubham', 23, 'Male');
+        console.log(person1.personInformation());
 
-        var me = new person;
-        console.log(me)
-        var meAtTTN = new employee;
-        console.log(meAtTTN)
-        var myRole = new developer;
-        console.log(myRole)
+        // Employee
+        function Employee(name, age, gender, companyName, joiningDate, emailId) {
+            Person.call(this, name, age, gender);
+
+            this.companyName = companyName;
+            this.joiningDate = joiningDate;
+            this.emailId = emailId;
+        }
+
+        Employee.prototype = Object.create(Person.prototype);
+        Employee.prototype.constructor = Employee;
+        Employee.prototype.employeeInformation = function () {
+            console.log(`${this.name} started working at ${this.companyName} from ${this.joiningDate} and we can contact him at ${this.emailId}`);
+        }
+
+        let employee1 = new Employee('Shubham', 23, 'Male', 'TO THE NEW', '2-October', 'shubham@tothenew.com');
+        console.log(employee1);
+        console.log(employee1.employeeInformation());
+
+        // Developer
+        function Developer(name, age, gender, companyName, joiningDate, emailId, competency, language) {
+            Employee.call(this, name, age, gender, companyName, joiningDate, emailId);
+
+            this.competency = competency;
+            this.language = language;
+        }
+
+        Developer.prototype = Object.create(Person.prototype);
+        Developer.prototype = Object.create(Employee.prototype);
+        Developer.prototype.constructor = Developer;
+
+        Developer.prototype.developerInfo = function () {
+            console.log(`${this.name} is a developer at ${this.companyName} in ${this.competency} and he is an expert in ${this.language}. SO for queries you can contact him at ${this.emailId}`);
+        }
+
+        let developer1 = new Developer('Shubham', 23, 'Male', 'TO THE NEW', '2-October', 'shubham@tothenew.com', 'FEEN', 'JavaScript');
+        console.log(developer1);
+        console.log(developer1.employeeInformation());
+        console.log(developer1.developerInfo());
     </script>
 </body>
 
