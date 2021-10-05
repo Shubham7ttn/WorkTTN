@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Functions</title>
+</head>
+<body>
+    <h3>Kindly open console to see the results</h3>
+    <script>
+        class User{
+            constructor(name, age, gender, email){
+                this.name = name;
+                this.age = age;
+                this.gender = gender;
+                this.email = email;
+            }
+
+            //Normal Function
+            displayUserInfo(){
+                console.log(`Hey! My name is ${this.name}, I'm ${this.age} years old and I'm a ${this.gender}. You can contact me on ${this.email} :)`);
+            };
+
+            //Static Function
+            static aboutUser(){
+                console.log('All the users at TO THE NEW are treated with respect');
+            }
+        };
+
+        let user1 = new User('Shubham', 23, 'Male', 'shubham@tothenew.com');
+        //Accessing normal method
+        console.log('NORMAL METHOD');
+        console.log(user1.displayUserInfo());
+
+        //Accessing static method
+        console.log('STATIC METHOD');
+        console.log(User.aboutUser());
+    </script>
+</body>
+</html>

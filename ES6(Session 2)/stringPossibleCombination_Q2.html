@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Possible Combinations of a string</title>
+</head>
+
+<body>
+    <h1>JavaScript program to find all the possible combinations of a string</h1>
+    <h4>Kindly open the console to see tha result</h4>
+    <script>
+        const findCombinations = word => {
+            let combinationMap = new Map();
+
+            //Genrating possible outcomes
+            for (let i = 0; i < word.length; i++) {
+                for (let j = i + 1; j < word.length + 1; j++) {
+                    if(!combinationMap.has(word.slice(i, j))){
+                        combinationMap.set(word.slice(i, j));
+                    }  
+                }
+            }
+
+            return combinationMap;
+        };
+
+        let resultMap = findCombinations('shubham');
+        console.log(resultMap);
+    </script>
+</body>
+
+</html>

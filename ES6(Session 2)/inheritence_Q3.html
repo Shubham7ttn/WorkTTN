@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritence using class</title>
+</head>
+
+<body>
+    <h3>Kindly open console to see the results</h3>
+    <script>
+        class Vehicle {
+            constructor(mode, type) {
+                this.mode = mode;
+                this.type = type;
+            }
+
+            //static method
+            static vehicleHistory(){
+                console.log('Vehicles are being used as primary mode of transportaion from the starting of human civilisation');
+            };
+
+            vehicleMode() {
+                console.log(`Hey! I'm built to be driven in ${this.mode}`);
+            };
+
+            vehicleType() {
+                console.log(`I'm a ${this.type}`);
+            }
+        }
+
+        //Parent class instance
+        let truck = new Vehicle('road', 'truck');
+        console.log('VEHICLE')
+        console.log(Vehicle.vehicleHistory()); //Static methods can be called using Class name
+        console.log(truck.vehicleMode());
+        console.log(truck.vehicleType());
+
+        class Car extends Vehicle {
+            constructor(mode, type, seatingCapacity, category) {
+                super(mode, type); //Removing this is causing Reference Error.
+                this.seatingCapacity = seatingCapacity;
+                this.category = category;
+            }
+
+            //static method
+            static aboutCars(){
+                console.log('Cars are compact vehicles generally owned by individuals or group of people and is used as a mode of transportation between cities.');
+            };
+
+            carSpecs() {
+                console.log(`Only ${this.seatingCapacity} number of people can sit`);
+                console.log(`I'm a ${this.category}`);
+            };
+        }
+        //2nd LEVEL OF INHERITENCE
+        //SUV CAR which is instance of CAR
+        let suvCar = new Car('road', 'car', 5, 'SUV');
+        //car class can access method of its own class as well as parent's class
+        console.log('CAR');
+        console.log(Car.aboutCars());
+        console.log(suvCar.vehicleMode());
+        console.log(suvCar.vehicleType());
+        console.log(suvCar.carSpecs());
+
+        //SEDAN CAR which is instance of CAR
+        let sedanCar = new Car('road', 'car', 4, 'Sedan');
+        //car class can access method of its own class as well as parent's class
+        console.log('CAR');
+        console.log(sedanCar.vehicleMode());
+        console.log(sedanCar.vehicleType());
+        console.log(sedanCar.carSpecs());
+
+
+        //3rd LEVEL OF INHERITENCE
+        class Compass extends Car {
+            constructor(mode, type, seatingCapacity, category, manufacturer, model, color, price) {
+                super(mode, type, seatingCapacity, category);
+                this.manufacturer = manufacturer;
+                this.model = model;
+                this.color = color;
+                this.price = price;
+            }
+
+            //static method
+            static aboutCompass(){
+                console.log('Compass is a premium SUV cars manufactured by JEEP which offers high quality product in the global market');
+            };
+
+            features() {
+                console.log(`Manufactured by ${this.manufacturer}, the all new ${this.model} in ${this.color} launched at an amazing price of INR ${this.price}`);
+            };
+        }
+
+        //compass longitude is an instance of compass
+        let compassLongitude = new Compass('Road', 'Car', 5, 'SUV', 'JEEP', 'Longitude', 'Charcoal Grey', 235000);
+        
+        console.log('JEEP COMPASS LONGITUDE');
+        console.log(Compass.aboutCompass());
+        console.log(compassLongitude.vehicleMode());
+        console.log(compassLongitude.vehicleType());
+        console.log(compassLongitude.carSpecs());
+        console.log(compassLongitude.features());
+    </script>
+</body>
+
+</html>
